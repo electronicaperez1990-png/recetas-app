@@ -1,19 +1,23 @@
 # recetas-app
 
-Aplicación de recetas de cocina en consola, construida con arquitectura MVC
-(Modelo-Vista-Controlador) en Python, usando `uv` como gestor de entorno y
-dependencias.
+Aplicación web de recetas de cocina, construida con arquitectura MVC
+(Modelo-Vista-Controlador) en Python usando Flask, con `uv` como gestor de
+entorno y dependencias.
 
 ## Estructura
 
 ```
 recetas-app/
-├── main.py                   # punto de entrada
-├── models/recipe.py          # Recipe + RecipeRepository (persistencia JSON, CRUD, búsqueda/filtro)
-├── views/console_view.py     # entrada/salida por consola
-├── controllers/recipe_controller.py  # bucle del menú, conecta vista y modelo
-├── data/recetas.json         # datos persistidos
-└── tests/test_recipe_model.py  # tests unitarios del modelo
+├── app.py                             # punto de entrada (Flask)
+├── models/recipe.py                   # Recipe + RecipeRepository (persistencia JSON, CRUD, búsqueda/filtro)
+├── controllers/recipe_controller.py   # Blueprint con las rutas, conecta vistas y modelo
+├── views/
+│   ├── templates/                     # plantillas Jinja2 (vista)
+│   └── static/style.css               # estilos
+├── data/recetas.json                  # datos persistidos
+└── tests/
+    ├── test_recipe_model.py           # tests unitarios del modelo
+    └── test_routes.py                 # tests de integración de las rutas
 ```
 
 ## Instalación
@@ -25,8 +29,10 @@ uv sync
 ## Ejecución
 
 ```bash
-uv run main.py
+uv run app.py
 ```
+
+Abre **http://127.0.0.1:5000** en el navegador.
 
 ## Tests
 

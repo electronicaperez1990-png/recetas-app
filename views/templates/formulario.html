@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block titulo %}{{ titulo }} · App de Recetas{% endblock %}
+
+{% block contenido %}
+  <h2>{{ titulo }}</h2>
+  <form class="formulario" method="post">
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre" value="{{ receta.nombre if receta else '' }}" required>
+
+    <label for="categoria">Categoría</label>
+    <input type="text" id="categoria" name="categoria"
+           value="{{ receta.categoria if receta else '' }}"
+           placeholder="postre, plato fuerte, entrada, bebida..." required>
+
+    <label for="ingredientes">Ingredientes</label>
+    <p class="ayuda">Uno por línea.</p>
+    <textarea id="ingredientes" name="ingredientes" required>{{ "\n".join(receta.ingredientes) if receta else '' }}</textarea>
+
+    <label for="pasos">Pasos de preparación</label>
+    <p class="ayuda">Uno por línea.</p>
+    <textarea id="pasos" name="pasos" required>{{ "\n".join(receta.pasos) if receta else '' }}</textarea>
+
+    <label for="tiempo_preparacion">Tiempo de preparación (minutos)</label>
+    <input type="number" id="tiempo_preparacion" name="tiempo_preparacion" min="0"
+           value="{{ receta.tiempo_preparacion if receta else '' }}" required>
+
+    <label for="porciones">Porciones</label>
+    <input type="number" id="porciones" name="porciones" min="1"
+           value="{{ receta.porciones if receta else '' }}" required>
+
+    <button class="btn-primario" type="submit">Guardar</button>
+  </form>
+{% endblock %}

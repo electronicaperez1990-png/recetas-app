@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block titulo %}App de Recetas{% endblock %}
+
+{% block contenido %}
+  <form class="buscador" action="{{ url_for('recetas.buscar') }}" method="get">
+    <input type="text" name="q" placeholder="Buscar por nombre o ingrediente..." value="{{ query or '' }}">
+    <button class="btn-primario" type="submit">Buscar</button>
+  </form>
+
+  {% if categorias %}
+    <div class="categorias">
+      {% for categoria in categorias %}
+        <a href="{{ url_for('recetas.por_categoria', nombre=categoria) }}">{{ categoria }}</a>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  {% if titulo_seccion %}<h2>{{ titulo_seccion }}</h2>{% endif %}
+
+  {% if recetas %}
+    {% for receta in recetas %}
+      <article class="tarjeta">
+        <h2><a href="{{ url_for('recetas.detalle', receta_id=receta.id) }}">{{ receta.nombre }}</a></h2>
+        <p class="meta">
+          {{ receta.categoria }} · {{ receta.tiempo_preparacion }} min · {{ receta.porciones }} porciones
+        </p>
+      </article>
+    {% endfor %}
+  {% else %}
+    <p>No hay recetas para mostrar.</p>
+  {% endif %}
+{% endblock %}

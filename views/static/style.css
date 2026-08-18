@@ -1,0 +1,185 @@
+:root {
+  color-scheme: light dark;
+  --bg: #faf7f2;
+  --text: #2b2118;
+  --accent: #b5541f;
+  --card: #ffffff;
+  --border: #e4dcd0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+header h1 a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+nav a {
+  margin-left: 1rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.buscador {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.buscador input[type="text"] {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.categorias {
+  margin-bottom: 1.5rem;
+}
+
+.categorias a {
+  display: inline-block;
+  margin: 0 0.4rem 0.4rem 0;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.flashes {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.flashes li {
+  padding: 0.6rem 0.9rem;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.flashes li.ok {
+  background: #e3f3e1;
+  color: #285c28;
+}
+
+.flashes li.error {
+  background: #fbe3e0;
+  color: #7a2a20;
+}
+
+.tarjeta {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.9rem;
+}
+
+.tarjeta h2 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.15rem;
+}
+
+.tarjeta h2 a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.meta {
+  color: #7a6f61;
+  font-size: 0.9rem;
+}
+
+.acciones {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 0.6rem;
+}
+
+.acciones a,
+.acciones button {
+  font-size: 0.85rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.acciones .eliminar {
+  color: #a33;
+  border-color: #e6bcbc;
+}
+
+form.formulario label {
+  display: block;
+  font-weight: 600;
+  margin: 0.9rem 0 0.3rem;
+}
+
+form.formulario input[type="text"],
+form.formulario input[type="number"],
+form.formulario textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font: inherit;
+}
+
+form.formulario textarea {
+  min-height: 90px;
+}
+
+.ayuda {
+  color: #7a6f61;
+  font-size: 0.8rem;
+}
+
+.btn-primario {
+  margin-top: 1.2rem;
+  padding: 0.6rem 1.2rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+ul.lista-simple {
+  padding-left: 1.2rem;
+}

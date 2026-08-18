@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block titulo %}{{ receta.nombre }} · App de Recetas{% endblock %}
+
+{% block contenido %}
+  <a href="{{ url_for('recetas.index') }}">&larr; Volver al listado</a>
+
+  <div class="tarjeta">
+    <h2>{{ receta.nombre }}</h2>
+    <p class="meta">
+      {{ receta.categoria }} · {{ receta.tiempo_preparacion }} min ·
+      {{ receta.porciones }} porciones · creada el {{ receta.fecha_creacion }}
+    </p>
+
+    <h3>Ingredientes</h3>
+    <ul class="lista-simple">
+      {% for ingrediente in receta.ingredientes %}
+        <li>{{ ingrediente }}</li>
+      {% endfor %}
+    </ul>
+
+    <h3>Pasos</h3>
+    <ol class="lista-simple">
+      {% for paso in receta.pasos %}
+        <li>{{ paso }}</li>
+      {% endfor %}
+    </ol>
+
+    <div class="acciones">
+      <a href="{{ url_for('recetas.editar_receta', receta_id=receta.id) }}">Editar</a>
+      <form action="{{ url_for('recetas.eliminar_receta', receta_id=receta.id) }}" method="post"
+            onsubmit="return confirm('¿Eliminar la receta \'{{ receta.nombre }}\'?');" style="display:inline;">
+        <button class="eliminar" type="submit">Eliminar</button>
+      </form>
+    </div>
+  </div>
+{% endblock %}
