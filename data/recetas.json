@@ -1,0 +1,66 @@
+[
+  {
+    "nombre": "Tortilla de patatas",
+    "categoria": "plato fuerte",
+    "ingredientes": [
+      "5 huevos",
+      "3 patatas medianas",
+      "1 cebolla",
+      "aceite de oliva",
+      "sal al gusto"
+    ],
+    "pasos": [
+      "Pelar y cortar las patatas y la cebolla en láminas finas.",
+      "Freír las patatas y la cebolla en aceite a fuego medio hasta que estén blandas.",
+      "Batir los huevos y mezclarlos con las patatas y la cebolla escurridas.",
+      "Cuajar la mezcla en una sartén por ambos lados hasta dorar."
+    ],
+    "tiempo_preparacion": 40,
+    "porciones": 4,
+    "id": "3f1c1a2e-1a1e-4b8a-9b0a-0a1a2b3c4d5e",
+    "fecha_creacion": "2026-08-18T00:00:00+00:00"
+  },
+  {
+    "nombre": "Ensalada César",
+    "categoria": "entrada",
+    "ingredientes": [
+      "1 lechuga romana",
+      "50 g de queso parmesano",
+      "1 taza de crutones",
+      "aderezo césar",
+      "pollo a la plancha (opcional)"
+    ],
+    "pasos": [
+      "Lavar y cortar la lechuga en trozos medianos.",
+      "Mezclar la lechuga con el aderezo césar.",
+      "Agregar los crutones y el queso parmesano.",
+      "Añadir el pollo a la plancha en tiras si se desea."
+    ],
+    "tiempo_preparacion": 15,
+    "porciones": 2,
+    "id": "7a2b3c4d-5e6f-4a1b-8c9d-1e2f3a4b5c6d",
+    "fecha_creacion": "2026-08-18T00:00:00+00:00"
+  },
+  {
+    "nombre": "Brownie de chocolate",
+    "categoria": "postre",
+    "ingredientes": [
+      "200 g de chocolate negro",
+      "150 g de mantequilla",
+      "3 huevos",
+      "200 g de azúcar",
+      "100 g de harina"
+    ],
+    "pasos": [
+      "Derretir el chocolate con la mantequilla a baño maría.",
+      "Batir los huevos con el azúcar hasta espumar.",
+      "Mezclar el chocolate derretido con los huevos batidos.",
+      "Incorporar la harina tamizada con movimientos envolventes.",
+      "Hornear a 180°C durante 25 minutos."
+    ],
+    "tiempo_preparacion": 45,
+    "porciones": 8,
+    "id": "9d0e1f2a-3b4c-4d5e-8f6a-2b3c4d5e6f7a",
+    "fecha_creacion": "2026-08-18T00:00:00+00:00"
+  }
+]

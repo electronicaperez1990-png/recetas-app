@@ -1,0 +1,14 @@
+[project]
+name = "recetas-app"
+version = "0.1.0"
+description = "Aplicación de recetas de cocina en consola (arquitectura MVC)"
+authors = [
+    { name = "electronicaperez1990-png", email = "electronicaperez1990@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+]
