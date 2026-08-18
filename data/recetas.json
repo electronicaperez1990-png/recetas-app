@@ -65,5 +65,33 @@
     "id": "9d0e1f2a-3b4c-4d5e-8f6a-2b3c4d5e6f7a",
     "fecha_creacion": "2026-08-18T00:00:00+00:00",
     "imagen": "d4d0e226-1156-434f-80d8-6b596a670437.jpg"
+  },
+  {
+    "nombre": "Ceviche peruano",
+    "categoria": "entrada",
+    "ingredientes": [
+      "500 g de pescado blanco fresco (corvina o lenguado), en cubos",
+      "1 taza de jugo de limón fresco",
+      "1 cebolla morada, en pluma fina",
+      "1 ají limo o ají amarillo picado",
+      "1 diente de ajo picado",
+      "cilantro fresco picado",
+      "sal al gusto",
+      "1 camote (batata) cocido, en rodajas",
+      "1 choclo (maíz) cocido, en rodajas"
+    ],
+    "pasos": [
+      "Cortar el pescado en cubos y colocarlo en un bol frío.",
+      "Salar el pescado y agregar el ajo picado.",
+      "Añadir el ají picado y mezclar.",
+      "Verter el jugo de limón fresco hasta cubrir el pescado y dejar marinar 5-10 minutos.",
+      "Incorporar la cebolla morada en pluma y el cilantro picado.",
+      "Rectificar la sal y servir de inmediato acompañado de camote y choclo."
+    ],
+    "tiempo_preparacion": 25,
+    "porciones": 4,
+    "id": "f76f8c6e-06ee-4720-8c9d-a5e51003d57f",
+    "fecha_creacion": "2026-08-18T04:40:27.790624+00:00",
+    "imagen": "dcc556b0-ff06-4e20-be35-9154d7661ed9.jpg"
   }
 ]

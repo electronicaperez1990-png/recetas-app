@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
-{% block titulo %}App de Recetas{% endblock %}
+{% block titulo %}Recetas de Raul{% endblock %}
+{% block body_class %}fondo-restaurante{% endblock %}
 
 {% block contenido %}
   <form class="buscador" action="{{ url_for('recetas.buscar') }}" method="get">

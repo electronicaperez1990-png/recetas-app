@@ -21,6 +21,46 @@ body {
   line-height: 1.5;
 }
 
+body.fondo-restaurante {
+  background-color: #062633;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 220'%3E%3Cpath fill='%23083041' fill-opacity='0.65' d='M0,130 C240,190 480,60 720,130 C960,190 1200,60 1440,130 L1440,220 L0,220 Z'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 220'%3E%3Cpath fill='%230f4c63' fill-opacity='0.55' d='M0,90 C240,150 480,20 720,90 C960,150 1200,20 1440,90 L1440,220 L0,220 Z'/%3E%3C/svg%3E"),
+    radial-gradient(circle at 22% 12%, rgba(255, 208, 130, 0.4), transparent 30%),
+    linear-gradient(180deg, #2b1b12 0%, #7a4128 16%, #c06a2d 30%, #e8a35f 42%, #4f8a92 56%, #14586c 72%, #06303f 88%, #041c26 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: bottom, bottom, top, top;
+  background-size: 100% 45%, 100% 55%, 100% 100%, 100% 100%;
+  color: #f2ece0;
+}
+
+body.fondo-restaurante header h1 a {
+  text-shadow: 0 0 12px rgba(255, 210, 140, 0.4);
+}
+
+body.fondo-restaurante .buscador input[type="text"] {
+  background: #0e2733;
+  border-color: #2f5a68;
+  color: #f2ece0;
+}
+
+body.fondo-restaurante .buscador input[type="text"]::placeholder {
+  color: #a8c4cb;
+}
+
+body.fondo-restaurante .categorias a {
+  background: #0e2733;
+  border-color: #2f5a68;
+  color: #e8b45c;
+}
+
+body.fondo-restaurante .tarjeta {
+  background: #fdf8f0;
+  border-color: #2f5a68;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -38,6 +78,22 @@ header h1 {
 header h1 a {
   color: var(--accent);
   text-decoration: none;
+}
+
+.icono-hoja {
+  vertical-align: -0.2em;
+}
+
+.titulo-verde {
+  color: #2e8b32;
+}
+
+.titulo-amarillo {
+  color: #d4a017;
+}
+
+.titulo-rojo {
+  color: #c62828;
 }
 
 nav a {
@@ -115,7 +171,7 @@ nav a {
 .miniatura {
   width: 72px;
   height: 72px;
-  border-radius: 8px;
+  border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
   border: 1px solid var(--border);

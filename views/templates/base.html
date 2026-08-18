@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block titulo %}App de Recetas{% endblock %}</title>
+  <title>{% block titulo %}Recetas de Raul{% endblock %}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
+<body class="{% block body_class %}{% endblock %}">
   <header>
-    <h1><a href="{{ url_for('recetas.index') }}">🍲 App de Recetas</a></h1>
+    <h1><a href="{{ url_for('recetas.index') }}"><svg class="icono-hoja" viewBox="-50 -55 100 58" width="1.4em" height="1.4em" aria-hidden="true"><g fill="#2e8b32" stroke="#1f5f23" stroke-width="1"><path d="M0,0 C-4,-8 -3,-16 0,-22 C3,-16 4,-8 0,0 Z" transform="rotate(0) translate(0,-27)"/><path d="M0,0 C-5,-11 -4,-24 0,-33 C4,-24 5,-11 0,0 Z" transform="rotate(-24)"/><path d="M0,0 C-5,-11 -4,-24 0,-33 C4,-24 5,-11 0,0 Z" transform="rotate(24)"/><path d="M0,0 C-6,-15 -5,-32 0,-44 C5,-32 6,-15 0,0 Z" transform="rotate(-48)"/><path d="M0,0 C-6,-15 -5,-32 0,-44 C5,-32 6,-15 0,0 Z" transform="rotate(48)"/><path d="M0,0 C-5,-11 -4,-22 0,-30 C4,-22 5,-11 0,0 Z" transform="rotate(-72)"/><path d="M0,0 C-5,-11 -4,-22 0,-30 C4,-22 5,-11 0,0 Z" transform="rotate(72)"/></g></svg> <span class="titulo-verde">Recetas</span> <span class="titulo-amarillo">de</span> <span class="titulo-rojo">Raul</span></a></h1>
     <nav>
       <a href="{{ url_for('recetas.index') }}">Inicio</a>
       <a href="{{ url_for('recetas.nueva_receta') }}">+ Nueva receta</a>
