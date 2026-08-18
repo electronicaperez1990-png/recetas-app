@@ -6,6 +6,11 @@
   <a href="{{ url_for('recetas.index') }}">&larr; Volver al listado</a>
 
   <div class="tarjeta">
+    {% if receta.imagen %}
+      <img class="imagen-detalle" src="{{ url_for('static', filename='uploads/' + receta.imagen) }}" alt="{{ receta.nombre }}">
+    {% else %}
+      <span class="imagen-detalle imagen-detalle-placeholder" aria-hidden="true">🍽️</span>
+    {% endif %}
     <h2>{{ receta.nombre }}</h2>
     <p class="meta">
       {{ receta.categoria }} · {{ receta.tiempo_preparacion }} min ·

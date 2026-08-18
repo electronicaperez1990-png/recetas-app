@@ -4,7 +4,7 @@
 
 {% block contenido %}
   <h2>{{ titulo }}</h2>
-  <form class="formulario" method="post">
+  <form class="formulario" method="post" enctype="multipart/form-data">
     <label for="nombre">Nombre</label>
     <input type="text" id="nombre" name="nombre" value="{{ receta.nombre if receta else '' }}" required>
 
@@ -28,6 +28,15 @@
     <label for="porciones">Porciones</label>
     <input type="number" id="porciones" name="porciones" min="1"
            value="{{ receta.porciones if receta else '' }}" required>
+
+    <label for="imagen">Foto de la receta</label>
+    {% if receta and receta.imagen %}
+      <img class="miniatura" src="{{ url_for('static', filename='uploads/' + receta.imagen) }}" alt="Foto actual">
+      <p class="ayuda">Ya tiene una foto. Sube otra para reemplazarla, o deja vacío para conservarla.</p>
+    {% else %}
+      <p class="ayuda">Opcional. Formatos: jpg, png, webp, gif.</p>
+    {% endif %}
+    <input type="file" id="imagen" name="imagen" accept="image/*">
 
     <button class="btn-primario" type="submit">Guardar</button>
   </form>

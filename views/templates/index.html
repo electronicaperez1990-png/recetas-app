@@ -20,11 +20,18 @@
 
   {% if recetas %}
     {% for receta in recetas %}
-      <article class="tarjeta">
-        <h2><a href="{{ url_for('recetas.detalle', receta_id=receta.id) }}">{{ receta.nombre }}</a></h2>
-        <p class="meta">
-          {{ receta.categoria }} · {{ receta.tiempo_preparacion }} min · {{ receta.porciones }} porciones
-        </p>
+      <article class="tarjeta tarjeta-con-imagen">
+        {% if receta.imagen %}
+          <img class="miniatura" src="{{ url_for('static', filename='uploads/' + receta.imagen) }}" alt="{{ receta.nombre }}">
+        {% else %}
+          <span class="miniatura miniatura-placeholder" aria-hidden="true">🍽️</span>
+        {% endif %}
+        <div>
+          <h2><a href="{{ url_for('recetas.detalle', receta_id=receta.id) }}">{{ receta.nombre }}</a></h2>
+          <p class="meta">
+            {{ receta.categoria }} · {{ receta.tiempo_preparacion }} min · {{ receta.porciones }} porciones
+          </p>
+        </div>
       </article>
     {% endfor %}
   {% else %}

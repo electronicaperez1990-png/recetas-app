@@ -23,6 +23,7 @@ class Recipe:
     fecha_creacion: str = field(
         default_factory=lambda: datetime.now(timezone.utc).isoformat()
     )
+    imagen: str | None = None
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -38,6 +39,7 @@ class Recipe:
             tiempo_preparacion=data["tiempo_preparacion"],
             porciones=data["porciones"],
             fecha_creacion=data["fecha_creacion"],
+            imagen=data.get("imagen"),
         )
 
 

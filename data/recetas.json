@@ -18,7 +18,8 @@
     "tiempo_preparacion": 40,
     "porciones": 4,
     "id": "3f1c1a2e-1a1e-4b8a-9b0a-0a1a2b3c4d5e",
-    "fecha_creacion": "2026-08-18T00:00:00+00:00"
+    "fecha_creacion": "2026-08-18T00:00:00+00:00",
+    "imagen": null
   },
   {
     "nombre": "Ensalada César",
@@ -39,7 +40,8 @@
     "tiempo_preparacion": 15,
     "porciones": 2,
     "id": "7a2b3c4d-5e6f-4a1b-8c9d-1e2f3a4b5c6d",
-    "fecha_creacion": "2026-08-18T00:00:00+00:00"
+    "fecha_creacion": "2026-08-18T00:00:00+00:00",
+    "imagen": null
   },
   {
     "nombre": "Brownie de chocolate",
@@ -61,6 +63,7 @@
     "tiempo_preparacion": 45,
     "porciones": 8,
     "id": "9d0e1f2a-3b4c-4d5e-8f6a-2b3c4d5e6f7a",
-    "fecha_creacion": "2026-08-18T00:00:00+00:00"
+    "fecha_creacion": "2026-08-18T00:00:00+00:00",
+    "imagen": null
   }
 ]
